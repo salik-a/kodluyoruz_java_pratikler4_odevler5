@@ -152,11 +152,33 @@ public class pratics4_homeworks5 {
         int result = 2*(n+m);
         System.out.println("Sonuç : " + result);
     }
+    static int power(int base,int power){
+        if(power==0)
+            return 1;
+        else
+            return (base*power(base,power-1));
+    }
+    static boolean prime(int n,int i){
+
+        if (n <= 2)
+            return (n == 2) ? true : false;
+        if (n % i == 0)
+            return false;
+        if (i * i > n)
+            return true;
+
+        // Check for next divisor
+        return prime(n, i + 1);
+    }
+    static void Pattern(int value){
+
+
+    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        /*
+
         System.out.println();
         System.out.println("---------------------------Practice1--------------------------------");
         System.out.println();
@@ -173,7 +195,7 @@ public class pratics4_homeworks5 {
 
 
 
-         */
+
         /*
 
         System.out.println();
@@ -250,17 +272,23 @@ public class pratics4_homeworks5 {
 
 
          */
-
+        /*
         System.out.println();
         System.out.println("---------------------------Homework1--------------------------------");
         System.out.println();
-        System.out.println("---------------------------Exponent Calculator Program--------------------------------");
+        System.out.println("---------------------------Power Calculator Program--------------------------------");
         System.out.println();
 
+        System.out.println("Enter base number : ");
+        int base2= scan.nextInt();
+        System.out.println("Enter power number : ");
+        int power2 = scan.nextInt();
+        int result = power(base2,power2);
+        System.out.println("Result : "+result);
 
-        
 
 
+         */
         /*
         System.out.println();
         System.out.println("---------------------------Homework2--------------------------------");
@@ -268,8 +296,12 @@ public class pratics4_homeworks5 {
         System.out.println("---------------------------Prime Number Finder Program--------------------------------");
         System.out.println();
 
-
-
+        System.out.println("Enter number : ");
+        int num= scan.nextInt();
+        if (prime(num,2))
+            System.out.println("Prime number");
+        else
+            System.out.println("Not prime number");
          */
 
         /*
@@ -279,8 +311,15 @@ public class pratics4_homeworks5 {
         System.out.println("---------------------------Creating Methods by Pattern--------------------------------");
         System.out.println();
 
+        System.out.println("Enter number : ");
+        int N= scan.nextInt();
+        System.out.println("N number : "+N);
+        System.out.print("Output : ");
+        Pattern(N);
 
 
          */
+
+
     }}
 
